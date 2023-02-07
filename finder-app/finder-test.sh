@@ -55,8 +55,10 @@ fi
 for i in $( seq 1 $NUMFILES)
 do
 	./writer.sh "$WRITEDIR/${username}$i.txt" "$WRITESTR"
+    echo "trying to write to $WRITEDIR/${username}$i.txt"
 done
 
+echo "after write ..."
 OUTPUTSTRING=$(./finder.sh "$WRITEDIR" "$WRITESTR")
 
 # remove temporary directories
